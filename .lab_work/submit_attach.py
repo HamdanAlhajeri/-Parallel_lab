@@ -1,0 +1,15 @@
+import re
+b=next(p for p in context.pages if '#InstanceDetails:instanceId=i-0697cd44b881f1b12' in p.url)
+b.bring_to_front()
+bf=b.frame(name='compute-react-frame')
+bf.get_by_role('button',name='Refresh instances',exact=True).click()
+b.wait_for_timeout(1400)
+assert '\nStopped\n' in bf.locator('body').inner_text(), 'Wait for B to stop'
+p=next(p for p in context.pages if '#AttachVolume' in p.url)
+p.bring_to_front()
+f=p.frame(name='storage-react-frame')
+f.get_by_role('option',name=re.compile('^xvdf')).click()
+assert 'i-0697cd44b881f1b12' in f.locator('body').inner_text()
+f.get_by_role('button',name='Attach volume',exact=True).click()
+p.wait_for_timeout(1200)
+print(f.locator('body').inner_text()[:2300])

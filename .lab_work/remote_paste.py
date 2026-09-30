@@ -1,0 +1,6 @@
+h = next(w['handle'] for w in rdp_windows() if w['class'] == 'TscShellContainerClass')
+focus(h)
+paste(Path(sys.argv[2]).read_text(encoding='utf-8').strip())
+keys('{ENTER}')
+time.sleep(12)
+screenshot(h, 'C:/Users/Xxthe/Parallel_lab/.lab_work/rdp.png')

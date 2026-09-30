@@ -1,0 +1,7 @@
+f=page.frame(name='compute-react-frame')
+assert 'i-0060fb425d7ebcbad' in f.locator('body').inner_text()
+f.get_by_role('textbox',name='Image name',exact=True).fill('Image-A-Hamdan')
+f.get_by_role('textbox',name='Image description - optional',exact=True).fill('Lab 3 Windows with Everything and WizTree installed')
+f.get_by_role('button',name='Create image',exact=True).click()
+page.wait_for_timeout(2500)
+print(f.locator('body').inner_text()[:5500])

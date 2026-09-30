@@ -1,0 +1,8 @@
+state=json.loads((WORK/'state.json').read_text())
+f=page.frame(name='security-groups-react-frame')
+row=f.get_by_role('row').filter(has_text=state['security_group'])
+assert 'launch-wizard-1 created 2026-09-25' in row.inner_text()
+row.get_by_role('checkbox').check()
+f.get_by_role('button',name='Actions',exact=True).click()
+f.get_by_role('menuitem',name='Delete security groups',exact=True).last.click()
+print(f.get_by_role('dialog').aria_snapshot())

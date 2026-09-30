@@ -1,0 +1,10 @@
+from urllib.parse import urljoin
+nav=next(p for p in context.pages if '#Snapshots' in p.url)
+target=nav.get_by_role('link',name='Volumes',exact=True).get_attribute('href')
+p=context.new_page()
+p.goto(urljoin(page.url,target))
+p.locator('#storage-react-frame').wait_for(state='attached')
+f=p.frame(name='storage-react-frame')
+f.get_by_role('button',name='Create volume',exact=True).click()
+p.wait_for_timeout(1200)
+print(f.locator('body').aria_snapshot()[:16000])

@@ -1,0 +1,19 @@
+1. map
+[2, 4, 6, 8, 10]
+
+2. reduce
+120
+
+3. Tokenization
+['this', 'is', 'a', 'sample', 'string', 'and', 'contains', '11', 'words']
+9
+
+4. Generator
+0
+1
+2
+3
+4
+
+5. Counter
+Counter({'sample': 2, 'this': 1, 'is': 1, 'a': 1, 'string': 1, 'and': 1, 'contains': 1, 'words': 1})

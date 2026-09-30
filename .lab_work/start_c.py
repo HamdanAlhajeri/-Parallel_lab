@@ -1,0 +1,15 @@
+state=json.loads((WORK/'state.json').read_text())
+assert 'C' not in state['instances'] and state['images']['B']['state']=='available'
+page.bring_to_front()
+page.goto('https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#InstanceDetails:instanceId='+state['instances']['B']['id'])
+page.locator('#compute-react-frame').wait_for(state='attached')
+f=page.frame(name='compute-react-frame')
+f.get_by_text('Terminated',exact=True).first.wait_for(timeout=25000)
+state['instances']['B']['state']='terminated'
+(WORK/'state.json').write_text(json.dumps(state,indent=2))
+page.screenshot(path=str(WORK/'evidence/aws/instance_b_terminated.png'))
+page.get_by_role('link',name='AMIs',exact=True).click()
+f.get_by_role('checkbox',name='Select image: '+state['images']['B']['id'],exact=True).check()
+f.get_by_role('button',name='Launch instance from AMI',exact=True).click()
+page.wait_for_timeout(1500)
+print('Opened Instance C launch wizard from Image B.')

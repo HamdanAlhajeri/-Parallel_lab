@@ -1,0 +1,6 @@
+p=next(p for p in context.pages if '#Volumes' in p.url)
+p.bring_to_front()
+print('URL:',p.url)
+print([(f.name,f.frame_element().is_visible()) for f in p.frames[1:] if f.name])
+f=p.frame(name='storage-react-frame')
+print(f.locator('body').aria_snapshot()[:16000])

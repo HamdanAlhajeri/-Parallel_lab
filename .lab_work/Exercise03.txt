@@ -1,0 +1,165 @@
+                          Khalifa University of Science and Technology
+
+
+
+           Department of Computer and Information Engineering
+           CCEN 448 – Cloud Infrastructure and Services
+
+                                    Lab Exercise #3
+                                         (20 points)
+
+
+Instructor: Prof. Khaled Salah.
+Teaching assistant: Mr. Mohammad Madine.
+General instructions:
+Upload your exercise report as a PDF file along with any related supporting files (if ap-
+plicable) via Blackboard. Your report must begin with a cover page that includes your
+name, student ID, and other relevant details.
+The report should contain high-quality screenshots of your work and provide a clear,
+professional description and analysis of the tasks performed. If necessary, include a
+README.txt file explaining the purpose and contents of the uploaded files.
+The exercises provide sufficient guidance to complete the tasks; therefore, obvious con-
+figuration steps may be omitted from the instructions. However, if you believe a specific
+step is important or requires clarification, you may share it via email.
+Submissions received after the deadline stated on Blackboard will be subject to a pro-
+gressive grade penalty. The amount deducted will increase with the length of the delay.
+Failure to submit within the allowed late submission period may result in a grade of
+zero.
+Exercise objective
+The goal of this exercise is getting deeper insight into AMIs and instances and develop -
+ing skills in creating pre-loaded and pre-built software images. Remember that an AMI is
+a template that contains the software configuration (operating system, application server,
+and applications) required to launch your instance.
+
+
+Training material
+   •   Read pages 19 – 25 and other material on AMIs and EBS from Amazon EC2 User
+       Guide posted on Blackboard.
+   •   Watch the YouTube videos:
+           ◦ https://www.youtube.com/watch?v=TORzO9Oc9oU.
+           ◦ https://www.youtube.com/watch?v=RkVSkL76U-M.
+           ◦ https://www.youtube.com/watch?v=gBII3o3BofU.
+           ◦    https://www.youtube.com/watch?v=iHX-jtKIVNA.
+   •   Also watch this recording to minimize charges and usages on AWS:
+       https://www.dropbox.com/s/vhmd8mizakfgspr/MinimizingChargesUsageOnAWS.
+       mp4.
+
+
+Task 1 – Create an AMI [10 points]
+Create your own AMI with preloaded software and use it to launch an instance by fol-
+lowing the steps:
+   1. Repeat the steps in Lab Exercise #2 and launch an EC2 instance (Windows,
+      t3.micro). Set the instance name to ‘Instance-A-<your first name>’. Once the
+      instance is running, connect to it. 📷
+          • Note: Keep the Administrator password securely stored. You will need it in
+              later steps.
+   2. Install the following software on Instance-A (you need to install at least two apps
+      in total): 📷
+          1. Voidtools https://www.voidtools.com/downloads (choose Installer 64-bit).
+          2. WizTree https://diskanalyzer.com/download.
+          3. Any appropriate lightweight app you like.
+   3. Shutdown/stop Instance-A. Then create an AMI from it: Go to Instances dashboard,
+      select the instance, click on Actions button, then Image and templates, and choose
+      Create Image. Set the image name to ‘Image-A-<your first name>’. Wait for the
+      AMI status to change to Available. 📷
+   4. Terminate Instance-A. Then launch a new EC2 instance (t3.micro) but instead of
+      the default Windows AMI, choose your own Image-A. Set the instance name to
+      ‘Instance-B-<your first name>’. Once the instance is running, connect to it. 📷
+          • Note: After launching Instance-B, keep note of its availability zone.
+   5. Verify that Instance-B contains the software you installed. 📷
+
+
+Task 2 – Attach an EBS and upload files [5 points]
+Attach an additional EBS to your instance by following the steps:
+   1. Create an empty 1 GB gp3 EBS volume. Keep the default IOPS and throughput.
+      Any more than 1 GB will incur charges. Set the storage name to ‘Storage-A-<your
+      first name>’. 📷
+          • Note: Make sure the availability zone of Storage-A and Instance-B match.
+   2. Shutdown/stop Instance-B. Then attach Storage-A to the instance.
+   3. Start Instance-B and verify that Storage-A is attached by checking ‘This PC’. 📷
+          • Note: If Storage-A does not show up, open the Disk Management app,
+              right-click on Disk 1, choose Online, then right-click on Disk 1 again,
+              choose Initialize Disk (continue with defaults), then right-click on Unallo-
+              cated, and choose New Simple Volume (continue with defaults).
+     4. From your own machine, open the terminal (for Windows use PowerShell, for
+        macOS and Linux use Terminal). Move to the Downloads folder using cd command.
+        Then execute the command.
+           • Hint: In most modern operating systems, you can right-click on the
+              Downloads folder and choose to open using the terminal.
+           • On Windows, run Get-Date -Format o | Out-File -FilePath "your first
+              name.txt".
+           • On macOS and Linux, run date -u '+%Y-%m-%dT%H:%M:%SZ' > "your first
+              name.txt".
+     5. Copy the resulting file from your own machine to Storage-A. 📷
+           • Note: Try to drag-and-drop or to copy-and-paste the file onto Storage-A.
+              Some RDP clients disable this feature. You can try to enable it, or to use a
+              file sharing service such as https://wormhole.app.
+
+
+Task 3 – Create an AMI with EBS [5 points]
+Create another AMI with a ready-to-attach EBS by following the steps:
+     1. Shutdown/stop Instance-B. Then create an AMI from it. Set the image name to
+        ‘Image-B-<your first name>’. Wait for the AMI status to change to Available. 📷
+     2. Terminate Instance-B. Then launch a new EC2 instance (t3.micro) based on Im-
+        age-B. Set the instance name to ‘Instance-C-<your first name>’. Once the in-
+        stance is running, connect to it. 📷
+     3. Verify that Instance-C contains the software you installed and the file you saved
+        on Storage-A. 📷
+
+
+Task 4 – Terminate all instances and delete all resources
+Important: Access to AWS is provided to you for free. By the end of each exercise, you
+need to terminate all the instances and delete all the resources you launch. Otherwise,
+you will consume your free hours of credits and Amazon will charge for the running and
+storage times as well as used network bandwidth.
+     •    Go to Instances page, select all instances, and terminate.
+     •    Go to AMIs page, select all images, and deregister.
+     •    Go to Volumes page, select all volumes, and delete.
+     •    Go to Snapshots page, select all snapshots, and delete.
+
+
+Submission deliverables
+Note: All screenshots of the AWS console must show your username at the top right
+corner of the page.
+Task 1
+ #       Deliver-     Description                                                   Poin
+         able                                                                       ts
+ 1       Screenshot   AWS EC2 Instances page showing running Instance-A after       1
+                      step 1.
+ 2       Screenshot   Instance-A running two of the installed software after step   2
+                      2.
+ 3       Screenshot   AWS EC2 AMIs page showing available Image-A after step        2
+                      3.
+ 4       Screenshot   AWS EC2 Instances page showing terminated Instance-A          1
+                      after step 4.
+ 5       Screenshot   AWS EC2 Instances page showing running Instance-B after       1
+                      step 4.
+ 6       Screenshot   Instance-B desktop showing the installed software icons af-   1
+                 ter step 5.
+7   Answer       How does AWS create AMIs from instances? Describe how            2
+                 Instances, AMIs, Volumes, and Snapshots are interrelated.
+Task 2
+#   Deliver-     Description                                                      Poin
+    able                                                                          ts
+8   Screenshot   AWS EC2 Volumes showing Storage-A after step 1.                  1
+9   Screenshot   Instance-B showing its two disks after step 3.                   1
+1   Screenshot   Running the date command on your machine at step 4.              1
+0
+1   Screenshot   Instance-B showing the text file in Storage-A after step 5.      1
+1
+1   Screenshot   Instance-B showing the contents of the text file after step 5.   1
+2
+Task 3
+#   Deliver-     Description                                                      Poin
+    able                                                                          ts
+1   Screenshot   AWS EC2 AMIs page showing available Image-B after step           1
+3                1.
+1   Screenshot   AWS EC2 Instances page showing running Instance-C after          1
+4                step 2.
+1   Screenshot   Instance-C desktop showing the installed software icons af-      1
+5                ter step 3.
+1   Screenshot   Instance-C File Explorer showing the text file on the restored   1
+6                data volume after step 3.
+1   Answer       Was Storage-A ready to use in Instance-B and Instance-C          1
+7                without manually configuring it? Explain your answer.
+

@@ -1,0 +1,17 @@
+page.reload()
+page.locator('#compute-react-frame').wait_for(state='attached')
+f=page.frame(name='compute-react-frame')
+f.get_by_text('Terminated',exact=True).first.wait_for(timeout=15000)
+page.bring_to_front()
+page.screenshot(path=str(WORK/'evidence/aws/04_instance_a_terminated.png'))
+state_path=WORK/'state.json'
+state=json.loads(state_path.read_text())
+state['instances']['A']['state']='terminated'
+state_path.write_text(json.dumps(state,indent=2))
+page.get_by_role('link',name='AMIs',exact=True).click()
+f.get_by_role('checkbox',name='Select image: ami-08c8483cf822da554',exact=True).check()
+f.get_by_role('button',name='Launch instance from AMI',exact=True).click()
+page.wait_for_timeout(2000)
+print('TABS:',[p.url.split('#')[-1] for p in context.pages])
+f=page.frame(name='instance-lx-react-frame')
+print(f.locator('body').aria_snapshot()[-14000:])

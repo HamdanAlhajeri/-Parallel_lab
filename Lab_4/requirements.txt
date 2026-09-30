@@ -1,0 +1,4 @@
+mrjob==0.7.4
+# Supplies distutils for mrjob on Python 3.12+; retain pkg_resources support.
+setuptools==80.10.2
+PyYAML==6.0.3

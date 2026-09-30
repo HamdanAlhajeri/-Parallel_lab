@@ -1,0 +1,6 @@
+state = json.loads((WORK / 'state.json').read_text())
+page.goto('https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#InstanceDetails:instanceId='+state['instances']['A']['id'])
+f = page.frame(name='compute-react-frame')
+f.get_by_role('button',name='Instance state',exact=True).first.click()
+f.get_by_role('menuitem',name='Stop instance',exact=True).click()
+print(f.get_by_role('dialog').aria_snapshot())

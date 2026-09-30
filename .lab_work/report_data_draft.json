@@ -1,0 +1,273 @@
+{
+  "title": "Lab Exercise #3 Report",
+  "subtitle": "Creating AMIs with Preloaded Software and EBS Storage",
+  "date": "Working draft prepared September 25, 2026",
+  "student_name": "Hamdan AlHajeri",
+  "student_id": "100060861",
+  "submission_date": null,
+  "complete": false,
+  "status": "Draft skeleton: execution, evidence, final analysis, and cleanup verification are pending.",
+  "course": "CCEN 448 - Cloud Infrastructure and Services",
+  "university": "Khalifa University of Science and Technology",
+  "department": "Department of Computer and Information Engineering",
+  "instructor": "Prof. Khaled Salah",
+  "teaching_assistant": "Mr. Mohammad Madine",
+  "metadata_sources": {
+    "student_name": "C:/Users/Xxthe/OneDrive/Desktop/Cloud_Lab/Lab2/work/report_data.json: student_name",
+    "student_id": "C:/Users/Xxthe/OneDrive/Desktop/Cloud_Lab/Lab2/work/report_data.json: student_id",
+    "course_and_staff": "C:/Users/Xxthe/Parallel_lab/.lab_work/Exercise03.txt: cover page",
+    "deliverables": "C:/Users/Xxthe/Parallel_lab/.lab_work/Exercise03.txt: Submission deliverables",
+    "prior_report_format": "C:/Users/Xxthe/OneDrive/Desktop/Cloud_Lab/Lab2/work/build_report.py",
+    "prior_editorial_preferences": "C:/Users/Xxthe/OneDrive/Desktop/Cloud_Lab/Lab2/work/SESSION_STATE.md: FINAL section"
+  },
+  "format_reference": {
+    "page_size": "US Letter, 8.5 by 11 inches",
+    "body_font": "Calibri 11 pt",
+    "heading_font": "Calibri Bold 15 pt",
+    "heading_color": "#13384B",
+    "cover_layout": "Centered university logo, navy title, italic subtitle, centered identity and course details",
+    "university_logo_source": "C:/Users/Xxthe/OneDrive/Desktop/Cloud_Lab/Lab2/work/university_logo.jpeg",
+    "deliverable_labels": "Bold and underlined",
+    "figure_captions": "Centered, Calibri Italic 10 pt",
+    "editorial_preferences": "Brief captions and one brief paragraph per required answer; no em dashes"
+  },
+  "environment": [
+    "Student name: Hamdan AlHajeri",
+    "Student ID: 100060861",
+    "Course: CCEN 448 - Cloud Infrastructure and Services",
+    "Instructor: Prof. Khaled Salah",
+    "Teaching assistant: Mr. Mohammad Madine",
+    "Execution environment: pending verification during this Lab 3 run."
+  ],
+  "introduction": [
+    "This exercise investigates how AMIs preserve installed software and EBS disk contents when new Windows EC2 instances are launched from them.",
+    "Working draft: the numbered sections below reserve every required deliverable. No Lab 3 execution results or screenshots have been inserted yet. AWS console screenshots must show the username at the top right."
+  ],
+  "planned_resource_names": {
+    "instance_a": "Instance-A-Hamdan",
+    "image_a": "Image-A-Hamdan",
+    "instance_b": "Instance-B-Hamdan",
+    "storage_a": "Storage-A-Hamdan",
+    "image_b": "Image-B-Hamdan",
+    "instance_c": "Instance-C-Hamdan",
+    "timestamp_file": "Hamdan.txt"
+  },
+  "sections": [
+    {
+      "id": "deliverable-01",
+      "task": 1,
+      "deliverable": 1,
+      "points": 1,
+      "kind": "screenshot",
+      "status": "pending",
+      "title": "Task 1 - Deliverable 1: Running Instance-A",
+      "paragraphs": ["Evidence pending: capture the AWS EC2 Instances page showing Instance-A-Hamdan running after Task 1, step 1. The AWS username must be visible at the top right."],
+      "evidence_file": "evidence/aws/01_instance_a_running.png",
+      "images": []
+    },
+    {
+      "id": "deliverable-02",
+      "task": 1,
+      "deliverable": 2,
+      "points": 2,
+      "kind": "screenshot",
+      "status": "pending",
+      "title": "Task 1 - Deliverable 2: Two Applications on Instance-A",
+      "paragraphs": ["Evidence pending: capture Instance-A running two installed applications after Task 1, step 2. Record the actual application names and versions after installation."],
+      "evidence_file": "evidence/remote/02_instance_a_apps_running.png",
+      "images": []
+    },
+    {
+      "id": "deliverable-03",
+      "task": 1,
+      "deliverable": 3,
+      "points": 2,
+      "kind": "screenshot",
+      "status": "pending",
+      "title": "Task 1 - Deliverable 3: Available Image-A",
+      "paragraphs": ["Evidence pending: capture the AWS EC2 AMIs page showing Image-A-Hamdan with status Available after Task 1, step 3. The AWS username must be visible at the top right."],
+      "evidence_file": "evidence/aws/03_image_a_available.png",
+      "images": []
+    },
+    {
+      "id": "deliverable-04",
+      "task": 1,
+      "deliverable": 4,
+      "points": 1,
+      "kind": "screenshot",
+      "status": "pending",
+      "title": "Task 1 - Deliverable 4: Terminated Instance-A",
+      "paragraphs": ["Evidence pending: capture the AWS EC2 Instances page showing Instance-A-Hamdan terminated after Task 1, step 4. The AWS username must be visible at the top right."],
+      "evidence_file": "evidence/aws/04_instance_a_terminated.png",
+      "images": []
+    },
+    {
+      "id": "deliverable-05",
+      "task": 1,
+      "deliverable": 5,
+      "points": 1,
+      "kind": "screenshot",
+      "status": "pending",
+      "title": "Task 1 - Deliverable 5: Running Instance-B",
+      "paragraphs": ["Evidence pending: capture the AWS EC2 Instances page showing Instance-B-Hamdan running from Image-A-Hamdan after Task 1, step 4. Record its availability zone for the EBS attachment. The AWS username must be visible at the top right."],
+      "evidence_file": "evidence/aws/05_instance_b_running.png",
+      "images": []
+    },
+    {
+      "id": "deliverable-06",
+      "task": 1,
+      "deliverable": 6,
+      "points": 1,
+      "kind": "screenshot",
+      "status": "pending",
+      "title": "Task 1 - Deliverable 6: Preserved Software on Instance-B",
+      "paragraphs": ["Evidence pending: capture the Instance-B desktop showing the installed software icons after Task 1, step 5. Confirm the applications are available in the new instance."],
+      "evidence_file": "evidence/remote/06_instance_b_software.png",
+      "images": []
+    },
+    {
+      "id": "deliverable-07",
+      "task": 1,
+      "deliverable": 7,
+      "points": 2,
+      "kind": "answer",
+      "status": "pending",
+      "title": "Task 1 - Deliverable 7: AMIs, Instances, Volumes, and Snapshots",
+      "question": "How does AWS create AMIs from instances? Describe how Instances, AMIs, Volumes, and Snapshots are interrelated.",
+      "paragraphs": ["Answer pending: explain the AMI creation process and the relationships among instances, AMIs, EBS volumes, and snapshots. Verify the explanation against AWS documentation and connect it to the observed Lab 3 workflow."],
+      "images": []
+    },
+    {
+      "id": "deliverable-08",
+      "task": 2,
+      "deliverable": 8,
+      "points": 1,
+      "kind": "screenshot",
+      "status": "pending",
+      "title": "Task 2 - Deliverable 8: Storage-A Volume",
+      "paragraphs": ["Evidence pending: capture the AWS EC2 Volumes page showing Storage-A-Hamdan after Task 2, step 1. Verify 1 GiB gp3, default IOPS and throughput, and an availability zone matching Instance-B. The AWS username must be visible at the top right."],
+      "evidence_file": "evidence/aws/08_storage_a_volume.png",
+      "images": []
+    },
+    {
+      "id": "deliverable-09",
+      "task": 2,
+      "deliverable": 9,
+      "points": 1,
+      "kind": "screenshot",
+      "status": "pending",
+      "title": "Task 2 - Deliverable 9: Two Disks on Instance-B",
+      "paragraphs": ["Evidence pending: capture Instance-B showing its system disk and attached Storage-A after Task 2, step 3. Record whether the new disk needed to be brought online, initialized, partitioned, formatted, or assigned a drive letter."],
+      "evidence_file": "evidence/remote/09_instance_b_two_disks.png",
+      "images": []
+    },
+    {
+      "id": "deliverable-10",
+      "task": 2,
+      "deliverable": 10,
+      "points": 1,
+      "kind": "screenshot",
+      "status": "pending",
+      "title": "Task 2 - Deliverable 10: Local Date Command",
+      "paragraphs": ["Evidence pending: capture PowerShell on the local machine after changing to Downloads and running Get-Date -Format o | Out-File -FilePath \"Hamdan.txt\" for Task 2, step 4. Preserve the actual generated file and timestamp."],
+      "evidence_file": "evidence/local/10_date_command.png",
+      "images": []
+    },
+    {
+      "id": "deliverable-11",
+      "task": 2,
+      "deliverable": 11,
+      "points": 1,
+      "kind": "screenshot",
+      "status": "pending",
+      "title": "Task 2 - Deliverable 11: File Copied to Storage-A",
+      "paragraphs": ["Evidence pending: capture Instance-B showing Hamdan.txt stored on Storage-A after Task 2, step 5. Record the drive letter and the actual method used to copy the local file."],
+      "evidence_file": "evidence/remote/11_instance_b_file.png",
+      "images": []
+    },
+    {
+      "id": "deliverable-12",
+      "task": 2,
+      "deliverable": 12,
+      "points": 1,
+      "kind": "screenshot",
+      "status": "pending",
+      "title": "Task 2 - Deliverable 12: File Contents on Instance-B",
+      "paragraphs": ["Evidence pending: capture Instance-B displaying the contents of Hamdan.txt from Storage-A after Task 2, step 5. Compare the displayed timestamp with the original local file."],
+      "evidence_file": "evidence/remote/12_instance_b_file_contents.png",
+      "images": []
+    },
+    {
+      "id": "deliverable-13",
+      "task": 3,
+      "deliverable": 13,
+      "points": 1,
+      "kind": "screenshot",
+      "status": "pending",
+      "title": "Task 3 - Deliverable 13: Available Image-B",
+      "paragraphs": ["Evidence pending: capture the AWS EC2 AMIs page showing Image-B-Hamdan with status Available after Task 3, step 1. Verify that its block device mappings include the system disk and the data volume. The AWS username must be visible at the top right."],
+      "evidence_file": "evidence/aws/13_image_b_available.png",
+      "images": []
+    },
+    {
+      "id": "deliverable-14",
+      "task": 3,
+      "deliverable": 14,
+      "points": 1,
+      "kind": "screenshot",
+      "status": "pending",
+      "title": "Task 3 - Deliverable 14: Running Instance-C",
+      "paragraphs": ["Evidence pending: capture the AWS EC2 Instances page showing Instance-C-Hamdan running from Image-B-Hamdan after Task 3, step 2. The AWS username must be visible at the top right."],
+      "evidence_file": "evidence/aws/14_instance_c_running.png",
+      "images": []
+    },
+    {
+      "id": "deliverable-15",
+      "task": 3,
+      "deliverable": 15,
+      "points": 1,
+      "kind": "screenshot",
+      "status": "pending",
+      "title": "Task 3 - Deliverable 15: Preserved Software on Instance-C",
+      "paragraphs": ["Evidence pending: capture the Instance-C desktop showing the installed software icons after Task 3, step 3. Verify that the applications are available in the new instance."],
+      "evidence_file": "evidence/remote/15_instance_c_software.png",
+      "images": []
+    },
+    {
+      "id": "deliverable-16",
+      "task": 3,
+      "deliverable": 16,
+      "points": 1,
+      "kind": "screenshot",
+      "status": "pending",
+      "title": "Task 3 - Deliverable 16: Restored File on Instance-C",
+      "paragraphs": ["Evidence pending: capture Instance-C File Explorer showing Hamdan.txt on the restored data volume after Task 3, step 3. Verify the file contents against the timestamp captured for Instance-B."],
+      "evidence_file": "evidence/remote/16_instance_c_restored_file.png",
+      "images": []
+    },
+    {
+      "id": "deliverable-17",
+      "task": 3,
+      "deliverable": 17,
+      "points": 1,
+      "kind": "answer",
+      "status": "pending",
+      "title": "Task 3 - Deliverable 17: Storage Readiness",
+      "question": "Was Storage-A ready to use in Instance-B and Instance-C without manually configuring it? Explain your answer.",
+      "paragraphs": ["Answer pending: compare the actual disk preparation needed on Instance-B with the restored data volume on Instance-C. Record whether the restored volume was immediately accessible or required bringing online or assigning a drive letter; explain the result using the preserved partition, file system, and file data. Do not assume either result before testing."],
+      "images": []
+    },
+    {
+      "id": "cleanup",
+      "task": 4,
+      "kind": "cleanup",
+      "status": "pending",
+      "title": "Task 4 - Resource Cleanup",
+      "paragraphs": ["Cleanup verification pending: after preserving the evidence, verify termination of all instances created for this lab, deregistration of Image-A and Image-B, and deletion of their remaining EBS volumes and snapshots. Record cleanup of any key pair or security group created specifically for this run. Preserve unrelated resources."],
+      "images": []
+    }
+  ],
+  "conclusion": [
+    "Conclusion pending: summarize the observed software and file persistence only after all lab tasks and cleanup checks have been completed."
+  ]
+}

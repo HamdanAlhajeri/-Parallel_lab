@@ -1,0 +1,5 @@
+p=next(p for p in context.pages if '#CreateVolume' in p.url)
+f=p.frame(name='storage-react-frame')
+f.get_by_role('spinbutton',name='Size (GiB)',exact=True).fill('1')
+f.get_by_role('button',name='Add new tag',exact=True).click()
+print(f.locator('body').aria_snapshot()[-5500:])

@@ -1,0 +1,85 @@
+Lab Exercise #3 Report
+Creating AMIs with Software and EBS Storage
+Student Name:  Hamdan AlHajeri
+Student ID:  100060861
+Course:  CCEN 448 – Cloud Infrastructure and Services
+Instructor:  Prof. Khaled Salah
+Teaching Assistant:  Mr. Mohammad Madine
+Report Date:  September 25, 2026 (working draft)
+WORKING DRAFT: AWS TASKS AND FINAL ANALYSIS PENDING
+
+Working draft: not ready for submission
+2
+Exercise Objective
+Create Windows EC2 images with preloaded applications, attach an EBS data disk, and check whether
+the applications and saved file are preserved when new instances are launched.
+WORKING DRAFT: only the local timestamp command (Deliverable 10) has been completed. AWS execution,
+screenshots, observed results, and cleanup verification remain pending.
+Task 1 - Create an AMI
+Deliverable 1: Running Instance-A
+Evidence pending: this screenshot has not yet been captured.
+Deliverable 2: Two Applications on Instance-A
+Evidence pending: this screenshot has not yet been captured.
+Deliverable 3: Available Image-A
+Evidence pending: this screenshot has not yet been captured.
+Deliverable 4: Terminated Instance-A
+Evidence pending: this screenshot has not yet been captured.
+Deliverable 5: Running Instance-B
+Evidence pending: this screenshot has not yet been captured.
+Deliverable 6: Preserved Software on Instance-B
+Evidence pending: this screenshot has not yet been captured.
+Deliverable 7: How are instances, AMIs, volumes, and snapshots related?
+An instance is the virtual computer, and EBS volumes store its operating system, applications, and
+files. Creating an EBS-backed AMI takes snapshots of the included volumes and records their storage
+layout. The AMI refers to those snapshots; launching from it creates new volumes from the saved
+data. Image-A is intended to preserve the installed applications, while Image-B should also preserve
+the additional disk and its text file. These outcomes still need to be verified in this run. [1-3]
+
+Working draft: not ready for submission
+3
+Task 2 - Attach an EBS and Upload Files
+Deliverable 8: Storage-A Volume
+Evidence pending: this screenshot has not yet been captured.
+Deliverable 9: Two Disks on Instance-B
+Evidence pending: this screenshot has not yet been captured.
+Deliverable 10: Local Date Command
+Figure 9 – PowerShell in Downloads created Hamdan.txt with timestamp 2026-09-25T12:44:18.1189433+04:00.
+Deliverable 11: File Copied to Storage-A
+Evidence pending: this screenshot has not yet been captured.
+Deliverable 12: File Contents on Instance-B
+Evidence pending: this screenshot has not yet been captured.
+
+Working draft: not ready for submission
+4
+Task 3 - Create an AMI with EBS
+Deliverable 13: Available Image-B
+Evidence pending: this screenshot has not yet been captured.
+Deliverable 14: Running Instance-C
+Evidence pending: this screenshot has not yet been captured.
+Deliverable 15: Preserved Software on Instance-C
+Evidence pending: this screenshot has not yet been captured.
+Deliverable 16: Restored File on Instance-C
+Evidence pending: this screenshot has not yet been captured.
+Deliverable 17: Was Storage-A ready to use in Instance-B and Instance-C without manually
+configuring it? Explain your answer.
+Expected behavior: Storage-A begins as an empty disk on Instance-B, so it may need to be brought
+online, initialized, partitioned, formatted, and assigned a drive letter. On Instance-C, the data volume
+restored through Image-B should retain its partition, file system, and saved file; it should not need
+formatting again. Windows might still need an online or drive-letter step. The actual configuration
+steps and file persistence on both instances have not yet been tested. [3, 4]
+
+Working draft: not ready for submission
+5
+Task 4 - Resource Cleanup
+Pending: after the AWS tasks, verify termination of the lab instances, deregistration of the lab AMIs, and
+deletion of their remaining EBS volumes and snapshots. Record cleanup of any key pair or security group
+created for this lab.
+References
+[1] AWS, Create an Amazon EBS-backed AMI.
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-ebs.html
+[2] AWS, Block device mappings.
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html
+[3] AWS, Restore a volume from a snapshot.
+https://docs.aws.amazon.com/ebs/latest/userguide/ebs-restoring-volume.html
+[4] AWS, Make an Amazon EBS volume available for use.
+https://docs.aws.amazon.com/ebs/latest/userguide/ebs-using-volumes.html

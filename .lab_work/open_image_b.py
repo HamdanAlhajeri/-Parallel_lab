@@ -1,0 +1,5 @@
+f=page.frame(name='compute-react-frame')
+f.get_by_role('menuitem',name='Image and templates',exact=True).click()
+f.get_by_role('menuitem',name='Create image',exact=True).click()
+f.get_by_role('textbox',name='Image name',exact=True).wait_for()
+print(f.locator('body').aria_snapshot())

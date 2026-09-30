@@ -1,0 +1,8 @@
+page.bring_to_front()
+page.goto('https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#Snapshots:')
+page.locator('#storage-react-frame').wait_for(state='attached')
+f=page.frame(name='storage-react-frame')
+f.get_by_role('button',name='Refresh snapshots',exact=True).wait_for()
+f.get_by_role('button',name='Refresh snapshots',exact=True).click()
+page.wait_for_timeout(1200)
+print(f.locator('body').inner_text()[:10000])

@@ -1,0 +1,8 @@
+assert '731776047103' in page.locator('body').inner_text()
+f = page.frame(name='compute-react-frame')
+assert 'No instances' in f.locator('body').inner_text()
+f.get_by_role('button', name='Launch instances', exact=True).first.click()
+f = page.frame(name='instance-lx-react-frame')
+f.get_by_role('textbox', name='Name', exact=True).fill('Instance-A-Hamdan')
+f.get_by_role('button', name='Windows Windows Logo', exact=True).click()
+print(f.locator('body').aria_snapshot()[-26000:])

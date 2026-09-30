@@ -1,0 +1,12 @@
+import re
+state=json.loads((WORK/'state.json').read_text())
+page=next(p for p in context.pages if '#LaunchInstances:' in p.url)
+page.bring_to_front()
+f=page.frame(name='instance-lx-react-frame')
+f.get_by_role('textbox',name='Name',exact=True).fill('Instance-C-Hamdan')
+f.get_by_role('button',name='Key pair name - required Select',exact=True).click()
+f.get_by_role('option',name=re.compile(state['key_pair'])).click()
+f.get_by_role('radio',name='Select existing security group',exact=True).check()
+f.get_by_role('button',name='Common security groups Select security groups',exact=True).click()
+f.get_by_role('option',name=re.compile(state['security_group'])).click()
+print(f.locator('body').aria_snapshot()[-17000:])

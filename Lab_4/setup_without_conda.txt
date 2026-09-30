@@ -1,0 +1,24 @@
+Lab 4 - PowerShell setup without Conda
+
+Run these commands from C:\Users\Xxthe\Parallel_lab\Lab_4:
+
+& 'C:\Users\Xxthe\AppData\Local\Programs\Python\Python312\python.exe' -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe Lab4.py
+
+The local .venv is already created using standalone Python 3.12, without
+Conda. The default python command on this computer points to Anaconda,
+so the setup command explicitly uses the standalone installation.
+setuptools supplies distutils, needed by the older mrjob package.
+Python 3.13 is unsuitable because mrjob also imports the removed pipes module.
+
+Using the virtual environment's Python directly requires no activation
+or PowerShell execution-policy changes. In an IDE, select this interpreter:
+C:\Users\Xxthe\Parallel_lab\Lab_4\.venv\Scripts\python.exe
+
+Task 1 uses only the Python standard library. mrjob is installed for the
+later MapReduce tasks. Lab4.py contains the five Task 1 exercises;
+task1_answers.txt contains the completed blanks and explanations.
+
+Official pip installation instructions:
+https://mrjob.readthedocs.io/en/latest/guides/quickstart.html

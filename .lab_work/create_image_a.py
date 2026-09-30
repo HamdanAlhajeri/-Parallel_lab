@@ -1,0 +1,8 @@
+page.reload()
+page.locator('#compute-react-frame').wait_for(state='attached')
+f = page.frame(name='compute-react-frame')
+f.get_by_text('Stopped', exact=True).first.wait_for(timeout=45000)
+f.get_by_role('button', name='Actions', exact=True).first.click()
+f.get_by_role('menuitem', name='Image and templates', exact=True).click()
+f.get_by_role('menuitem', name='Create image', exact=True).click()
+print(f.locator('body').aria_snapshot()[-16000:])

@@ -1,0 +1,339 @@
+{
+  "passed": false,
+  "checked_utc": "2026-09-25T12:17:43.889516+00:00",
+  "source": "C:\\Users\\Xxthe\\OneDrive\\Desktop\\Cloud_Lab\\Lab3\\work\\report_data.json",
+  "pdf": "C:\\Users\\Xxthe\\OneDrive\\Desktop\\Cloud_Lab\\Lab3\\output\\CCEN448_Lab3_Hamdan_AlHajeri_100060861_DRAFT.pdf",
+  "pdf_sha256": "e5434046a2af43ed39910b135b6dfbf230bdf860a97e06002fa66f11aff996bd",
+  "required_deliverables": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "required_screenshot_deliverables": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "checks": {
+    "source_complete": false,
+    "source_deliverables": true,
+    "source_screenshots": true,
+    "source_answers": true,
+    "no_pending_blocks": false,
+    "final_filename": false,
+    "all_screenshot_files_readable": false,
+    "pdf_nonempty": true,
+    "pdf_deliverables": true,
+    "pdf_figures": false,
+    "pdf_identity": true,
+    "pdf_staff": true,
+    "pdf_no_unfinished_markers": false,
+    "pdf_no_em_dashes": true,
+    "all_screenshots_embedded": false,
+    "all_content_within_page_bounds": true,
+    "docx_deliverables": true,
+    "docx_images": false,
+    "docx_no_unfinished_markers": false
+  },
+  "failures": [
+    "report_data.json does not have complete=true.",
+    "Source still contains pending blocks.",
+    "The PDF filename still identifies it as a draft.",
+    "Deliverable 13: screenshot file is missing: C:\\Users\\Xxthe\\OneDrive\\Desktop\\Cloud_Lab\\Lab3\\work\\evidence\\aws\\13_image_b_available.png",
+    "Deliverable 14: screenshot file is missing: C:\\Users\\Xxthe\\OneDrive\\Desktop\\Cloud_Lab\\Lab3\\work\\evidence\\aws\\14_instance_c_running.png",
+    "Deliverable 15: screenshot file is missing: C:\\Users\\Xxthe\\OneDrive\\Desktop\\Cloud_Lab\\Lab3\\work\\evidence\\remote\\15_instance_c_software.png",
+    "Deliverable 16: screenshot file is missing: C:\\Users\\Xxthe\\OneDrive\\Desktop\\Cloud_Lab\\Lab3\\work\\evidence\\remote\\16_instance_c_restored_file.png",
+    "PDF must display Figure 1-15 exactly once.",
+    "PDF still contains unfinished markers: \\bdraft\\b, \\bpending\\b, not ready for submission, has not yet been captured, have not yet been tested, still need to be verified",
+    "Deliverable 1: original screenshot pixels were not found among the embedded PDF images.",
+    "Deliverable 2: original screenshot pixels were not found among the embedded PDF images.",
+    "Deliverable 3: original screenshot pixels were not found among the embedded PDF images.",
+    "Deliverable 4: original screenshot pixels were not found among the embedded PDF images.",
+    "Deliverable 5: original screenshot pixels were not found among the embedded PDF images.",
+    "Deliverable 6: original screenshot pixels were not found among the embedded PDF images.",
+    "Deliverable 8: original screenshot pixels were not found among the embedded PDF images.",
+    "Deliverable 9: original screenshot pixels were not found among the embedded PDF images.",
+    "Deliverable 11: original screenshot pixels were not found among the embedded PDF images.",
+    "Deliverable 12: original screenshot pixels were not found among the embedded PDF images.",
+    "DOCX must have 15 evidence images plus the university logo.",
+    "DOCX still contains unfinished markers: \\bdraft\\b, \\bpending\\b, has not yet been captured, have not yet been tested, still need to be verified"
+  ],
+  "warnings": [],
+  "screenshots": [
+    {
+      "deliverable": 1,
+      "path": "C:\\Users\\Xxthe\\OneDrive\\Desktop\\Cloud_Lab\\Lab3\\work\\evidence\\aws\\01_instance_a_running.png",
+      "exists": true,
+      "caption": "Instance-A-Hamdan running as a Windows t3.micro instance.",
+      "dimensions": [
+        1600,
+        1000
+      ],
+      "pixel_sha256": "76014ee4c5126537996b204ed3bcecfa894037a560a18133fd63ab3d25b2eadf",
+      "sha256": "b06430a5336eadd0235135c203ca3edc16ba9200f8b635b93ca087f5067b940c",
+      "bytes": 213503
+    },
+    {
+      "deliverable": 2,
+      "path": "C:\\Users\\Xxthe\\OneDrive\\Desktop\\Cloud_Lab\\Lab3\\work\\evidence\\remote\\02_instance_a_apps_running.png",
+      "exists": true,
+      "caption": "Everything and WizTree running on Instance-A.",
+      "dimensions": [
+        1458,
+        947
+      ],
+      "pixel_sha256": "e3a4f379b324dd4d3c6ed1b228d8f498388dd5a75828edef0775b3e9b40ab468",
+      "sha256": "7930f64cf215095d3ac5196e1e909da8e37707ff24addbdfc416f4d39548199e",
+      "bytes": 407622
+    },
+    {
+      "deliverable": 3,
+      "path": "C:\\Users\\Xxthe\\OneDrive\\Desktop\\Cloud_Lab\\Lab3\\work\\evidence\\aws\\03_image_a_available.png",
+      "exists": true,
+      "caption": "Image-A-Hamdan available after capturing Instance-A.",
+      "dimensions": [
+        2000,
+        1250
+      ],
+      "pixel_sha256": "a1b7691deb340d589cd234f23617fa08d2a341692552b0ab36cd18a90b3c68c1",
+      "sha256": "11574aa25dd5cbc48231f88d7702804ce85e3430217ea0b90a145ca244903031",
+      "bytes": 239171
+    },
+    {
+      "deliverable": 4,
+      "path": "C:\\Users\\Xxthe\\OneDrive\\Desktop\\Cloud_Lab\\Lab3\\work\\evidence\\aws\\04_instance_a_terminated.png",
+      "exists": true,
+      "caption": "Instance-A-Hamdan terminated after Image-A became available.",
+      "dimensions": [
+        2000,
+        1250
+      ],
+      "pixel_sha256": "c126264bd0b27bc8840fe219b30b3344e8ccad77560ac56e8dd764ef6336fe34",
+      "sha256": "84a5b43e839fe571027de20afa7ff8696d93e15b5630318e71f020c6f0caf276",
+      "bytes": 247400
+    },
+    {
+      "deliverable": 5,
+      "path": "C:\\Users\\Xxthe\\OneDrive\\Desktop\\Cloud_Lab\\Lab3\\work\\evidence\\aws\\05_instance_b_running.png",
+      "exists": true,
+      "caption": "Instance-B-Hamdan running from Image-A-Hamdan.",
+      "dimensions": [
+        2000,
+        1250
+      ],
+      "pixel_sha256": "9ccff03fcd2c92d9ea2c0fd956ddb4869edb11fad14dd4c7fe0822782f59269a",
+      "sha256": "6b6c0a456ea16de37d49daf8a56d724386ba9153f60b484592a7b077e480fab8",
+      "bytes": 274315
+    },
+    {
+      "deliverable": 6,
+      "path": "C:\\Users\\Xxthe\\OneDrive\\Desktop\\Cloud_Lab\\Lab3\\work\\evidence\\remote\\06_instance_b_software.png",
+      "exists": true,
+      "caption": "Everything and WizTree icons preserved on Instance-B.",
+      "dimensions": [
+        1458,
+        947
+      ],
+      "pixel_sha256": "fe43f1a75f00c287cf1f237ce22bee88177b4f5827c8cab111c87f07fbb89cc4",
+      "sha256": "05a8e4fc031aacab51c01e9cd1eaff25300f0d2993e8b5dd0b40caa621e2dee5",
+      "bytes": 892018
+    },
+    {
+      "deliverable": 8,
+      "path": "C:\\Users\\Xxthe\\OneDrive\\Desktop\\Cloud_Lab\\Lab3\\work\\evidence\\aws\\08_storage_a_volume.png",
+      "exists": true,
+      "caption": "Storage-A-Hamdan: 1 GiB gp3, 3000 IOPS, 125 MiB/s, in us-east-1a.",
+      "dimensions": [
+        1800,
+        1000
+      ],
+      "pixel_sha256": "6fed26bab1e6ae11088bf256b45c9f8d71fe04b0802b770621d33a197bb65951",
+      "sha256": "450691417912bf48381315e5d93883f7f7dc587b8d0af1bc2705a4b725c8dd97",
+      "bytes": 204699
+    },
+    {
+      "deliverable": 9,
+      "path": "C:\\Users\\Xxthe\\OneDrive\\Desktop\\Cloud_Lab\\Lab3\\work\\evidence\\remote\\09_instance_b_two_disks.png",
+      "exists": true,
+      "caption": "Instance-B showing Windows (C:) and Storage-A-Hamdan (E:).",
+      "dimensions": [
+        1458,
+        947
+      ],
+      "pixel_sha256": "19413ca19d26921048ab63e41e78e0b2a81370552dab393ca6305129057c1f19",
+      "sha256": "37fe3dd95296ca46d023766de6e72581d0e54d4025a1f6a6347fed4cab88b831",
+      "bytes": 397228
+    },
+    {
+      "deliverable": 10,
+      "path": "C:\\Users\\Xxthe\\OneDrive\\Desktop\\Cloud_Lab\\Lab3\\work\\evidence\\10_local_date.png",
+      "exists": true,
+      "caption": "PowerShell in Downloads created Hamdan.txt with timestamp 2026-09-25T12:44:18.1189433+04:00.",
+      "dimensions": [
+        1100,
+        650
+      ],
+      "pixel_sha256": "119d4c8be11861da307576250bfafcadeef086f89959344d7d19bd234fc427ca",
+      "sha256": "117ad9773dddb47c2fbd7fea1fc26bb1022a4191a521325935250c4fc3d93ef7",
+      "bytes": 31794
+    },
+    {
+      "deliverable": 11,
+      "path": "C:\\Users\\Xxthe\\OneDrive\\Desktop\\Cloud_Lab\\Lab3\\work\\evidence\\remote\\11_instance_b_file.png",
+      "exists": true,
+      "caption": "Hamdan.txt copied from the local Downloads folder to Storage-A on Instance-B.",
+      "dimensions": [
+        1458,
+        947
+      ],
+      "pixel_sha256": "e97d228cb4dd6fa259969823b43ecaab61a9aaae7236b399b5727d5e15ad2427",
+      "sha256": "b067f68ce49a55eeda8641c49c0df8484e2cb4597f41de9790551e3835d1f7e0",
+      "bytes": 440465
+    },
+    {
+      "deliverable": 12,
+      "path": "C:\\Users\\Xxthe\\OneDrive\\Desktop\\Cloud_Lab\\Lab3\\work\\evidence\\remote\\12_instance_b_file_contents.png",
+      "exists": true,
+      "caption": "The timestamp in E:\\Hamdan.txt matches the original file, with an identical SHA-256 hash.",
+      "dimensions": [
+        1458,
+        947
+      ],
+      "pixel_sha256": "11c0cdd72c08c614e968f9f2370831b942760e7384a5bdb1ba413544d52b067e",
+      "sha256": "42e0a55d90b3845acfcae9aa419a6278fff28318ac360a2231dd6f2c13602b65",
+      "bytes": 377388
+    },
+    {
+      "deliverable": 13,
+      "path": "C:\\Users\\Xxthe\\OneDrive\\Desktop\\Cloud_Lab\\Lab3\\work\\evidence\\aws\\13_image_b_available.png",
+      "exists": false,
+      "caption": "Evidence pending."
+    },
+    {
+      "deliverable": 14,
+      "path": "C:\\Users\\Xxthe\\OneDrive\\Desktop\\Cloud_Lab\\Lab3\\work\\evidence\\aws\\14_instance_c_running.png",
+      "exists": false,
+      "caption": "Evidence pending."
+    },
+    {
+      "deliverable": 15,
+      "path": "C:\\Users\\Xxthe\\OneDrive\\Desktop\\Cloud_Lab\\Lab3\\work\\evidence\\remote\\15_instance_c_software.png",
+      "exists": false,
+      "caption": "Evidence pending."
+    },
+    {
+      "deliverable": 16,
+      "path": "C:\\Users\\Xxthe\\OneDrive\\Desktop\\Cloud_Lab\\Lab3\\work\\evidence\\remote\\16_instance_c_restored_file.png",
+      "exists": false,
+      "caption": "Evidence pending."
+    }
+  ],
+  "pages": [
+    {
+      "page": 1,
+      "size_points": [
+        612.0,
+        792.0
+      ],
+      "image_draws": 1,
+      "deliverables": [],
+      "render": "C:\\Users\\Xxthe\\Parallel_lab\\.lab_work\\verification_smoke\\page_01.png"
+    },
+    {
+      "page": 2,
+      "size_points": [
+        612.0,
+        792.0
+      ],
+      "image_draws": 0,
+      "deliverables": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "render": "C:\\Users\\Xxthe\\Parallel_lab\\.lab_work\\verification_smoke\\page_02.png"
+    },
+    {
+      "page": 3,
+      "size_points": [
+        612.0,
+        792.0
+      ],
+      "image_draws": 1,
+      "deliverables": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "render": "C:\\Users\\Xxthe\\Parallel_lab\\.lab_work\\verification_smoke\\page_03.png"
+    },
+    {
+      "page": 4,
+      "size_points": [
+        612.0,
+        792.0
+      ],
+      "image_draws": 0,
+      "deliverables": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "render": "C:\\Users\\Xxthe\\Parallel_lab\\.lab_work\\verification_smoke\\page_04.png"
+    },
+    {
+      "page": 5,
+      "size_points": [
+        612.0,
+        792.0
+      ],
+      "image_draws": 0,
+      "deliverables": [],
+      "render": "C:\\Users\\Xxthe\\Parallel_lab\\.lab_work\\verification_smoke\\page_05.png"
+    }
+  ],
+  "artifacts": [
+    "C:\\Users\\Xxthe\\OneDrive\\Desktop\\Cloud_Lab\\Lab3\\output\\CCEN448_Lab3_Hamdan_AlHajeri_100060861_DRAFT.pdf",
+    "C:\\Users\\Xxthe\\Parallel_lab\\.lab_work\\verification_smoke\\contact_sheet.png",
+    "C:\\Users\\Xxthe\\OneDrive\\Desktop\\Cloud_Lab\\Lab3\\output\\CCEN448_Lab3_Hamdan_AlHajeri_100060861_DRAFT.docx"
+  ],
+  "manual_review": [
+    "Inspect contact_sheet.png and page PNGs for layout and legibility.",
+    "Confirm every AWS console screenshot visibly includes the username at the top right.",
+    "Confirm captions, written observations, and cleanup statements agree with the actual evidence."
+  ]
+}

@@ -1,0 +1,9 @@
+state_path=WORK/'state.json'
+state=json.loads(state_path.read_text())
+state['images']['A']={'id':'ami-08c8483cf822da554','name':'Image-A-Hamdan'}
+state['instances']['A']['state']='stopped'
+state_path.write_text(json.dumps(state,indent=2))
+page.get_by_role('link',name='AMIs',exact=True).click()
+page.wait_for_timeout(1500)
+f=page.frame(name='compute-react-frame')
+print(f.locator('body').aria_snapshot()[:17000])

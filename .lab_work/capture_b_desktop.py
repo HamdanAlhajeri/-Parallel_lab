@@ -1,0 +1,12 @@
+if win32gui.IsWindow(2230862) and win32gui.GetWindowText(2230862)=='OK':
+    win32gui.SendMessage(2230862,win32con.BM_CLICK,0,0)
+h=next(w['handle'] for w in rdp_windows() if w['class']=='TscShellContainerClass' and 'Hamdan-Lab3-B' in w['title'])
+focus(h)
+win32gui.SetWindowPos(h,0,20,30,1458,947,win32con.SWP_NOZORDER)
+win32api.keybd_event(win32con.VK_LWIN,0,0,0)
+win32api.keybd_event(ord('D'),0,0,0)
+time.sleep(.15)
+win32api.keybd_event(ord('D'),0,win32con.KEYEVENTF_KEYUP,0)
+win32api.keybd_event(win32con.VK_LWIN,0,win32con.KEYEVENTF_KEYUP,0)
+time.sleep(2)
+screenshot(h,'C:/Users/Xxthe/OneDrive/Desktop/Cloud_Lab/Lab3/work/evidence/remote/06_instance_b_software.png')

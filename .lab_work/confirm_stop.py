@@ -1,0 +1,6 @@
+f = page.frame(name='compute-react-frame')
+dialog = f.get_by_role('dialog')
+assert 'Instance-A-Hamdan' in dialog.inner_text() or 'Instance-B-Hamdan' in dialog.inner_text()
+dialog.get_by_role('button',name='Stop',exact=True).click()
+page.wait_for_timeout(1500)
+print(f.locator('body').inner_text()[:2300])

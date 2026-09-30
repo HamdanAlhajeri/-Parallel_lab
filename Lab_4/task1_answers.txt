@@ -1,0 +1,56 @@
+Lab 4 - Task 1
+
+1. map
+Completed code:
+numbers = [1, 2, 3, 4, 5]
+duplicate = list(map(lambda x: 2*x, numbers))
+print(duplicate)
+
+Output: [2, 4, 6, 8, 10]
+Blanks: map; lambda; list.
+The map function applies the lambda function to every item of the list.
+It generates an iterable object that is converted to a list using list.
+
+2. reduce
+Completed code:
+from functools import reduce
+numbers = [1, 2, 3, 4, 5]
+product = reduce(lambda x, y: x * y, numbers)
+print(product)
+
+Output: 120
+Blanks: reduce; lambda; product.
+The reduce function applies the lambda function cumulatively to the list
+items. The result is the product of all numbers in the list.
+
+3. Tokenization
+Output:
+['this', 'is', 'a', 'sample', 'string', 'and', 'contains', '11', 'words']
+9
+
+Blanks: regular expressions; pattern matching; lower(); re.findall().
+The re module supports regular expressions for text manipulation and
+pattern matching. lower() converts the input string to lowercase.
+re.findall() returns all matches of the pattern in the input text.
+The pattern \w+ includes numeric tokens, so '11' is included.
+Although the sentence says '11 words', it actually contains 9 tokens.
+
+4. Generator
+Output:
+0
+1
+2
+3
+4
+
+Blanks: generator; yield; memory-efficient.
+my_generator is a generator function. yield emits the current value and
+pauses execution. Producing values only when requested avoids storing
+the whole sequence, making the generator memory-efficient.
+
+5. Counter
+Output:
+Counter({'sample': 2, 'this': 1, 'is': 1, 'a': 1, 'string': 1, 'and': 1, 'contains': 1, 'words': 1})
+
+Counter counts occurrences of each item in an iterable. Here it counts
+each word's frequency. It is a class in collections, not a Python keyword.
