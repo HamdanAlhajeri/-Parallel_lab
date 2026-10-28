@@ -29,7 +29,7 @@ gcc -O0 -pthread Task4/task4c_no_race.c -o t4c && ./t4c
 ## Task 1
 
 **Program 1** prints a number that is usually **less than 500000** and changes from run to run
-(e.g. 213874, 298412, ...).
+(three test runs gave 138218, 122631, 135883).
 
 All 5 threads are created first and run at the same time. `counter++` is not one instruction – it is
 *load counter → add 1 → store counter*. If two threads load the same value, both add 1 and both
@@ -83,7 +83,7 @@ Both programs print **9592** primes between 0 and 100000.
 - **(b)** `task4b_pthreads.c` – two threads, `t1` for [0, 1,000,000] and `t2` for
   [1,000,001, 2,000,000]; endpoints passed in a struct. This version has race conditions:
   - both threads do `count++` on the same global variable with no lock, so updates can be lost and
-    the total can come out wrong (less than 148933);
+    the total can come out wrong (test runs gave 140777, 140562, 141549, 144496 instead of 148933);
   - `t2` finds its sieving primes by reading `is_composite[2..1414]`, which `t1` is writing at the
     same time.
 - **(c)** `task4c_no_race.c` – race-free version. Always prints **148933**
